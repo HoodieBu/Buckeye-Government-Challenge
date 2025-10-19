@@ -13,69 +13,114 @@
     </div>
 
     <nav class="nav-buttons">
-      <button>Home</button>
-      <button>Learn More</button>
-      <button>Tests</button>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#study-guides">Study Guides</a>
+    <a href="#tests">Tests</a>
     </nav>
 </header>
 
-<section class="hero">
+<section id="home" class="hero">
     <div class="hero-content">
       <h1>Welcome to the Buckeye Government Challenge</h1>
       <p>Participate in tests to learn more about your state government!</p>
     </div>
 </section>
 
-<section class="learn-ohio">
-  <div class="container">
-    <h2>Learn More About Ohio</h2>
+<section id="about" class="about-section">
+  <div class="about-container">
+    <div class="about-logo">
+      <img src="Images/BGCLogo.png" alt="About Us Logo">
+    </div>
+
+    <h2>About Us</h2>
     <p>
-      
+      The <strong>Buckeye Government Challenge</strong> was created to help Ohio students and residents
+      better understand the structure and importance of their state government. Our goal is to make
+      learning about Ohio’s laws, leaders, and history engaging and accessible for everyone.
+    </p>
+
+    <p>
+      Through interactive study guides, quizzes, and maps, users can explore how Ohio’s government works,
+      discover key figures in leadership, and test their civic knowledge — all while having fun!
+    </p>
+
+    <p>
+      Whether you’re preparing for a class, reviewing for a test, or just curious about your state, the
+      Buckeye Government Challenge gives you the tools to become a more informed and active citizen.
     </p>
   </div>
 </section>
 
- <section class="tests">
-    <h2>Tests</h2>
-    <div class="test-grid">
+<!-- === Interactive Ohio Map Section === -->
+<section id="study-guides" class="map-section">
+  <h2>Study Guides</h2>
+  <p>Want to learn more before you take one of our tests? Try here with our already made study guides! </p>
+  <div id="mapContainer"></div>
+</section>
 
-      <div class="test-card">
-        <div class="test-image"></div>
+<section id="tests" class="tests-section">
+  <h2>Tests</h2>
+  <div class="tests-container">
+
+    <div class="test-card">
+      <div class="test-image">
+        <img src="Images/TestImages/CapitalImage.jpg" alt="Government Basics">
+      </div>
+      <div class="test-info">
         <h3>Ohio Government Basics</h3>
         <p>Test your knowledge about the structure and functions of Ohio’s state government.</p>
         <button>Start Test</button>
       </div>
+    </div>
 
-      <div class="test-card">
-        <div class="test-image"></div>
+    <div class="test-card">
+      <div class="test-image">
+        <img src="Images/TestImages/LocalGovernment.jpg" alt="Local Government">
+      </div>
+      <div class="test-info">
         <h3>Local Government</h3>
         <p>See how much you know about Ohio’s cities, counties, and local systems.</p>
         <button>Start Test</button>
       </div>
+    </div>
 
-      <div class="test-card">
-        <div class="test-image"></div>
+    <div class="test-card">
+      <div class="test-image">
+        <img src="Images/TestImages/OhioConstitutions.jpg" alt="Legislative Branch">
+      </div>
+      <div class="test-info">
         <h3>Constitution & Rights</h3>
         <p>Challenge yourself with questions about Ohio’s constitution and citizen rights.</p>
         <button>Start Test</button>
       </div>
+    </div>
 
-      <div class="test-card">
-        <div class="test-image"></div>
+    <div class="test-card">
+      <div class="test-image">
+        <img src="Images/TestImages/History.jpg" alt="Judicial Branch">
+      </div>
+      <div class="test-info">
         <h3>History of Ohio</h3>
         <p>Take a journey through Ohio’s past and its impact on today’s state government.</p>
         <button>Start Test</button>
       </div>
+    </div>
 
-      <div class="test-card">
-        <div class="test-image"></div>
+    <div class="test-card">
+      <div class="test-image">
+        <img src="Images/TestImages/Officals.jpg" alt="Local Government">
+      </div>
+      <div class="test-info">
         <h3>Current Officials</h3>
         <p>See if you can name the key figures in Ohio’s current political landscape.</p>
         <button>Start Test</button>
       </div>
-
     </div>
-  </section>
+
+  </div>
+</section>
+
 
    <footer class="main-footer">
     <div class="footer-top">
@@ -95,6 +140,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="index.js"></script>
 
 </body>
 </html>
