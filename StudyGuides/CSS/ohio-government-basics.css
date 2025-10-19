@@ -1,0 +1,165 @@
+  /* ====== Base ====== */
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+  body { background: #f4f6f8; color: #111; min-height: 100vh; }
+
+  /* ====== Header (placeholder) ====== */
+  .main-header {
+    display:flex; justify-content:space-between; align-items:center;
+    height:72px; padding:0 24px; background:#0d1b2a; color:#fff;
+  }
+  .main-header img { height:48px; }
+  .nav-buttons button {
+    background:#1b263b; color:#fff; border:none; padding:8px 12px; border-radius:8px; margin-left:8px; cursor:pointer;
+  }
+
+/* ====== Progress wrapper ====== */
+.progress-wrapper {
+  width: calc(100% - 40px);
+  max-width: 1100px;
+  margin: 28px auto;
+  position: relative;
+  padding: 40px 0; /* give vertical room for line + circles */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The connecting line */
+.progress-line {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  right: 6%;
+  height: 6px;
+  background: #e0e0e0;
+  transform: translateY(-50%);
+  border-radius: 6px;
+  z-index: 1;
+}
+
+/* Steps container (flex) */
+.progress-steps {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* centers vertically over the line */
+  width: 88%;
+  margin: 0 auto;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 6px;
+  background: #34a853;
+  border-radius: 6px;
+  transform: translateY(-50%);
+  width: 0%;
+  transition: width 0.6s ease-in-out;
+  z-index: 1;
+}
+
+/* Each circle */
+.circle {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #c5cfe0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1b263b;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 260ms cubic-bezier(.2,.9,.2,1);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  /* Remove translateY so it aligns perfectly */
+  transform: none;
+}
+  /* make sure visual center sits exactly on the line:
+     progress-steps and progress-line top alignment handled above */
+  .progress-steps .circle { margin-top: 0; }
+
+  /* number inside span so we can hide it when completed */
+  .circle .num { display: inline-block; line-height: 1; }
+
+  /* completed style: green background + check via pseudo */
+.circle.completed {
+  background: #34a853;
+  border-color: #34a853;
+  color: #fff;
+  transform: scale(1.08); /* removed translateY */
+}
+  .circle.completed .num { visibility: hidden; width: 0; height: 0; display: inline-block; }
+  .circle.completed::after {
+    content: "✔";
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+ .circle.active {
+  border-color: #1b263b;
+  background: #1b263b;
+  color: #fff;
+  transform: scale(1.12); /* removed translateY */
+}
+
+  /* smaller screens tweak */
+  @media (max-width:600px) {
+    .circle { width: 36px; height: 36px; }
+    .circle::after { font-size: 16px; }
+    .progress-line { left: 4%; right: 4%; }
+    .progress-steps { width: 92%; }
+  }
+
+  /* ====== Study area (text fills page) ====== */
+  .study-section {
+    min-height: calc(100vh - 72px - 120px); /* header + progress area */
+    padding: 36px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg,#eef5f9 0,#f8fbfd 100%);
+  }
+
+  /* no boxed container — text sits directly on the page */
+  .study-content {
+    width: 100%;
+    max-width: 980px;
+    text-align: left;
+    padding: 12px 18px;
+    transition: opacity 350ms ease, transform 350ms ease;
+  }
+
+  /* fade animations */
+  .study-content.fade-out { opacity: 0; transform: translateY(10px); pointer-events: none; }
+  .study-content.fade-in  { opacity: 1; transform: translateY(0); }
+
+  #sectionTitle { font-size: 2.05rem; color: #102033; margin-bottom: 12px; }
+  #sectionContent { font-size: 1.125rem; line-height: 1.7; color: #222; white-space: pre-wrap; }
+
+  /* controls area */
+  .controls { display:flex; justify-content:flex-end; margin-top: 28px; }
+  #nextBtn {
+    appearance: none; border: none; background: #1b263b; color: #fff; padding: 12px 20px; border-radius: 8px;
+    cursor: pointer; font-size: 1rem; transition: background .2s ease;
+  }
+  #nextBtn:hover { background: #415a77; }
+  #nextBtn:disabled { opacity: .6; cursor: default; background: #777; }
+
+  /* small screens */
+  @media (max-width:900px) {
+    #sectionTitle { font-size: 1.6rem; }
+    #sectionContent { font-size: 1rem; }
+  }
