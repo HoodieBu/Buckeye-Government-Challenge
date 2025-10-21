@@ -3,42 +3,72 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Buckeye Government Challenge</title>
-  <link rel="stylesheet" href="/StudyGuides/CSS/ohio-government-basics.css">
-  <link rel="icon" type="image/x-icon" href="Images/favicon.png">
+  <title>Buckeye Government Challenge - Study Guide</title>
+  <link rel="stylesheet" href="test.css">
 </head>
 <body>
-
   <!-- Header -->
   <header class="main-header">
-    <div class="logo"><img src="your-logo.png" alt="Logo"></div>
-    <nav class="nav-buttons">
-      <button>Home</button>
-      <button>About</button>
-      <button>Study Guide</button>
-      <button>Contact</button>
-    </nav>
-  </header>
+  <img src="/BCGHeader.png" alt="Logo">
+  <div class="nav-buttons">
+    <a href="#">Back To Home Page</a>
+  </div>
+</header>
 
-   <!-- Progress -->
-  <div class="progress-wrapper" aria-hidden="false">
-    <div class="progress-line" aria-hidden="true"></div>
-    <div class="progress-fill" aria-hidden="true"></div>
-    <div class="progress-steps" id="progressSteps" role="list"></div>
+  <!-- Menu -->
+  <div class="menu-wrap" id="menuWrap">
+    <h1 class="menu-title">Ohio Government Basics</h1>
+    <div class="sections-grid" id="sectionsGrid">
+      <div class="section-card" data-key="ohio-basics">Topic #1</div>
+      <div class="section-card" data-key="branches">Topic #2</div>
+      <div class="section-card" data-key="local">Topic #3</div>
+      <div class="section-card" data-key="constitution">Topic #4</div>
+      <div class="section-card" data-key="elections">Topic #5</div>
+      <div class="section-card" data-key="rights">Topic #6</div>
+    </div>
   </div>
 
-  <!-- Study section (info fills page) -->
-  <main class="study-section">
-    <article class="study-content fade-in" id="studyContent" aria-live="polite">
-      <h2 id="sectionTitle">Loading…</h2>
-      <div id="sectionContent">Please wait…</div>
+  <!-- Presentation container (hidden until a section is opened) -->
+  <div id="presentationContainer">
+    <button id="backButton" class="back-btn">← Back to Sections</button>
 
-      <div class="controls" aria-hidden="false">
-        <button id="nextBtn" type="button">Go to Next</button>
+    <div class="progress-wrapper" aria-hidden="false">
+      <div class="progress-line" aria-hidden="true"></div>
+      <!-- progress-fill will be injected dynamically -->
+      <div class="progress-steps" id="progressSteps" role="list"></div>
+    </div>
+
+    <main class="study-section">
+      <article class="study-content fade-in" id="studyContent" aria-live="polite">
+        <h2 id="sectionTitle">Loading…</h2>
+        <div id="sectionContent">Please wait…</div>
+
+        <div class="controls" aria-hidden="false">
+          <button id="nextBtn" type="button">Go to Next</button>
+        </div>
+      </article>
+    </main>
+  </div>
+
+   <footer class="main-footer">
+    <div class="footer-top">
+      <h3>Buckeye Government Challenge</h3>
+      <p>
+        Empowering learners to understand Ohio’s government through fun and interactive quizzes.
+      </p>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-logo">
+        <img src="/BCGHeader.png" alt="Logo">
       </div>
-    </article>
-  </main>
 
-  <script src="/StudyGuides/JS/ohio-government-basics.js"></script>
+      <div class="footer-copy">
+        <p>© 2025 Buckeye Government Challenge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="test.js"></script>
 </body>
 </html>
