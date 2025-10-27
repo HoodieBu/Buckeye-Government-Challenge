@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ohio Government Basics </title>
+  <link rel="stylesheet" href="test.css">
+  <link rel="icon" type="image/x-icon" href="/Images/favicon.png">
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+  <img src="/Images/BCGHeader.png" alt="Logo">
+  <div class="nav-buttons">
+    <a href="/index.html">Back To Home Page</a>
+  </div>
+</header>
 
+  <!-- Menu -->
+  <div class="menu-wrap" id="menuWrap">
+    <h1 class="menu-title">Ohio Government Basics</h1>
+    <div class="sections-grid" id="sectionsGrid">
+      <div class="section-card" data-key="structure">Structure of Ohio’s Government</div>
+      <div class="section-card" data-key="legislative">The Legislative Branch (Ohio General Assembly)</div>
+      <div class="section-card" data-key="executive">The Executive Branch</div>
+      <div class="section-card" data-key="judicial">The Judicial Branch</div>
+      <div class="section-card" data-key="leadershiproles">Leadership Roles</div>
+      <div class="section-card" data-key="citizenshipandvoting">Citizenship and Voting</div>
+    </div>
+  </div>
+
+  <!-- Presentation container (hidden until a section is opened) -->
+  <div id="presentationContainer">
+    <button id="backButton" class="back-btn">← Back to Sections</button>
+
+    <div class="progress-wrapper" aria-hidden="false">
+      <div class="progress-line" aria-hidden="true"></div>
+      <!-- progress-fill will be injected dynamically -->
+      <div class="progress-steps" id="progressSteps" role="list"></div>
+    </div>
+
+    <main class="study-section">
+      <article class="study-content fade-in" id="studyContent" aria-live="polite">
+        <h2 id="sectionTitle">Loading…</h2>
+        <div id="sectionContent">Please wait…</div>
+
+        <div class="controls" aria-hidden="false">
+          <button id="nextBtn" type="button">Go to Next</button>
+        </div>
+      </article>
+    </main>
+  </div>
+
+   <footer class="main-footer">
+    <div class="footer-top">
+      <h3>Buckeye Government Challenge</h3>
+      <p>
+        Empowering learners to understand Ohio’s government through fun and interactive quizzes.
+      </p>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-logo">
+        <img src="/Images/BCGHeader.png" alt="Logo">
+      </div>
+
+      <div class="footer-copy">
+        <p>© 2025 Buckeye Government Challenge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="test.js"></script>
+</body>
+</html>
