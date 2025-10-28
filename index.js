@@ -38,14 +38,14 @@ const cities = [
     title: 'Constitution & Rights', 
     desc: 'Welcome to Chillicothe, Ohio! The Ohio Constitution was written and signed here! Ready to learn all about it?', 
     x: 320, y: 420, 
-    link: 'StudyGuides/constitution-rights.html'
+    link: 'StudyGuides/constitution-and-rights.html'
   },
   { 
     name: 'Toledo', 
     title: 'Current Officials', 
     desc: 'Welcome to Toledo, Ohio! Ready to learn who your states officials are?', 
     x: 200, y: 120, 
-    link: 'StudyGuides/current-officials.html'
+    link: 'StudyGuides/current-ohio-officials.html'
   }
 ];
 
