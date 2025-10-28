@@ -267,7 +267,7 @@ html {
   line-height: 1.4;
 }
 
-.test-info button {
+.test-info a {
   background: #1b263b;
   color: #fff;
   border: none;
@@ -275,6 +275,7 @@ html {
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.25s ease;
+  text-decoration: none;
 }
 
 .test-info button:hover {
