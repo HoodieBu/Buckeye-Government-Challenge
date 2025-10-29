@@ -110,25 +110,18 @@ const ALL_SECTIONS = {
     }
   }
 
-// ===== Intro Screen Logic (Fixed for Multi-Page Setup) =====
+// ===== Intro Screen Logic (Always Show) =====
 document.addEventListener("DOMContentLoaded", () => {
   const introScreen = document.getElementById("introScreen");
   const startBtn = document.getElementById("startBtn");
 
-  // Generate a unique key based on the current page filename
-  const pageKey = "introShown_" + window.location.pathname.split("/").pop();
-
-  if (localStorage.getItem(pageKey)) {
-    introScreen.style.display = "none";
-  } else {
-    introScreen.style.display = "flex";
-  }
+  // Always show the intro
+  introScreen.style.display = "flex";
 
   startBtn.addEventListener("click", () => {
     introScreen.classList.add("fade-out");
     setTimeout(() => {
       introScreen.style.display = "none";
-      localStorage.setItem(pageKey, "true");
     }, 1000); // match fade-out duration
   });
 });
