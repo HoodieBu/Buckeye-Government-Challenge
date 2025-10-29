@@ -3,15 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Buckeye Government Challenge - Study Guide</title>
+  <title>Ohio Government Basics </title>
   <link rel="stylesheet" href="/StudyGuides/CSS/ohio-government-basics.css">
+  <link rel="icon" type="image/x-icon" href="/Images/favicon.png">
 </head>
 <body>
+
+<!-- Intro Screen -->
+<div id="introScreen" class="intro-screen">
+  <div class="intro-content">
+    <img src="/Images/Flag_Map_of_Ohio.svg" alt="Ohio Flag" class="flag">
+    <h1>Welcome to the <span>Ohio Government Basics Study Guide</span></h1>
+    <p>Learn about Ohio’s government, voting, and your role as a citizen.</p>
+    <button id="startBtn" class="start-btn">Start Learning</button>
+  </div>
+</div>
+
+
   <!-- Header -->
   <header class="main-header">
-  <img src="/BCGHeader.png" alt="Logo">
+  <img src="/Images/BCGHeader.png" alt="Logo">
   <div class="nav-buttons">
-    <a href="#">Back To Home Page</a>
+    <a href="/index.html">Back To Home Page</a>
   </div>
 </header>
 
@@ -19,12 +32,12 @@
   <div class="menu-wrap" id="menuWrap">
     <h1 class="menu-title">Ohio Government Basics</h1>
     <div class="sections-grid" id="sectionsGrid">
-      <div class="section-card" data-key="ohio-basics">Topic #1</div>
-      <div class="section-card" data-key="branches">Topic #2</div>
-      <div class="section-card" data-key="local">Topic #3</div>
-      <div class="section-card" data-key="constitution">Topic #4</div>
-      <div class="section-card" data-key="elections">Topic #5</div>
-      <div class="section-card" data-key="rights">Topic #6</div>
+      <div class="section-card" data-key="structure">Structure of Ohio’s Government</div>
+      <div class="section-card" data-key="legislative">The Legislative Branch (Ohio General Assembly)</div>
+      <div class="section-card" data-key="executive">The Executive Branch</div>
+      <div class="section-card" data-key="judicial">The Judicial Branch</div>
+      <div class="section-card" data-key="leadershiproles">Leadership Roles</div>
+      <div class="section-card" data-key="citizenshipandvoting">Citizenship and Voting</div>
     </div>
   </div>
 
@@ -60,7 +73,7 @@
 
     <div class="footer-bottom">
       <div class="footer-logo">
-        <img src="/BCGHeader.png" alt="Logo">
+        <img src="/Images/BCGHeader.png" alt="Logo">
       </div>
 
       <div class="footer-copy">
@@ -69,6 +82,6 @@
     </div>
   </footer>
 
-  <script src="test.js"></script>
+  <script src="/StudyGuides/JS/ohio-government-basics.js"></script>
 </body>
 </html>
